@@ -1,0 +1,395 @@
+/*global*/
+
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+/*responsive navbar*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    color: white;
+    border-bottom: solid grey;
+}
+
+.brand-title {
+    font-size: 2rem;
+    margin: 3rem;
+   
+}
+
+.navbar-links ul{
+    margin:3rem;
+    padding:0;
+    display: flex;
+    font-size: 2rem;
+
+}
+
+.navbar-links li {
+    list-style: none;
+}
+ 
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+    
+}
+
+.navbar-links li:hover{
+    background-color: grey;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display:none;
+        width: 100%;
+        
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .brand-title{
+        margin: .75rem;
+        font-size: .75rem;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+        font-size: 1rem;
+        margin: bottom .75rem; 
+       
+    }
+    .navbar-links li{
+        text-align: center;
+        
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+        
+    }
+    
+    .navbar-links.active{
+        display: flex;
+    }
+    }
+    
+    @media (max-width: 400px) {
+        .toggle-button{
+            display: flex;
+        }
+        .navbar-links{
+            display:none;
+            width: 100%;
+        }
+        .navbar{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .navbar-links ul{
+            flex-direction: column;
+            width: 100%;
+        }
+        .navbar-links li{
+            text-align: center;
+        }
+        .navbar-links li a {
+            padding: .5rem 1rem;
+        }
+        
+        .navbar-links.active{
+            display: flex;
+        }
+        .brand-title{
+            font-size: .75rem;
+            padding-bottom: 1rem;
+        }
+        .toggle-button{
+            font-size: 1rem;
+            
+        }
+        }
+
+/* Title Img */
+
+@media (max-width: 400px) {
+    main{
+        display: grid;
+        margin: auto;
+        width: 100%;
+        position: relative;
+    }
+    
+    .fit-pic-container{
+        display: none;
+    }
+
+    .fit-picture {
+        visibility: hidden; 
+        
+    }
+
+    .main-text{
+        display: flex;
+        position: relative;
+        align-content: start;
+        width: 100%;
+        left: 2.5rem;
+        font-size: .75rem;
+       }
+
+    }
+
+/* index.html main*/
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2;
+    margin: auto;
+    position: relative;
+    padding: 1rem;
+   
+}
+.fit-pic-container {
+    width: 100%;
+    padding: auto;
+ 
+}
+.fit-picture {
+    margin: auto;
+    padding-top: 2rem;
+    position: relative;
+    display: grid;
+    width: 90%; 
+}
+
+.main-text{
+display: grid;
+font-weight: 300;
+padding: .5rem;
+position: relative;
+background-color: white;
+width: 90%;
+line-height: 1.5rem;
+border: solid;
+filter: drop-shadow(.75rem .75rem 1rem);
+
+}
+.main-text h2{
+    text-decoration: underline;
+    text-align: center;
+    line-height: 2.5rem;
+    text-shadow: 5px 5px 20px grey;
+}
+.main-text p {
+    font-weight: 600;
+    text-indent: 1rem;
+    text-shadow: 5px 5px 20px grey;
+}
+
+.bold-p{
+    font-size: 1.25rem;
+    text-shadow: 5px 5px 20px grey;
+}
+
+.hiddenOption a href{
+    visibility: hidden;
+}
+
+
+/*table*/
+
+table {
+    
+    background-color: rgb(248, 246, 246);
+    border-collapse: collapse;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+      
+   }
+   
+   caption,
+   th,
+   td{
+       padding: 1rem;
+   }
+   caption {
+       text-decoration: underline;
+       background-color:rgb(128, 126, 126); 
+       color: white;
+       font-size: 1.5rem;
+       font-weight: bold; 
+       text-transform: uppercase;   
+   }
+   
+   tr:nth-last-of-type(2n) {
+    background: rgba(96, 108, 93, .3) ;
+    
+   }
+
+   tr,td{
+    padding-left: 10rem;
+   }
+   
+   @media (max-width: 650px) {
+       th{ display: none;}
+   
+       td{
+           display: block;
+       }
+       td::before{
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+       }   
+       tr,td {
+        padding: .5rem;
+       }
+   }
+
+/*about.html*/
+.aboutMain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2;
+    margin: auto;
+    position: relative;
+    padding: 1rem;
+    text-shadow: 5px 5px 20px grey;
+    
+}
+
+.aboutImgContainer{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.aboutImg{
+    display: flex;
+    position: relative;
+    height: 600px;
+    left: 2rem;
+    top: 2rem;
+    border: solid black;
+    filter: drop-shadow(.5rem .5rem .75rem);
+}
+
+.aboutInfoCard p{
+position: relative;
+ width: 500px;
+ left: 4rem;
+ font-size: large;
+ text-indent: 1rem;
+  }
+
+.aboutInfo{
+    position: relative;
+    border: solid;
+    width: 600px;
+    left: 4rem;
+    border: solid;
+    background-color: white;
+}
+
+.aboutInfo h2{
+    position: relative;
+    text-decoration: underline;
+    text-shadow: 5px 5px 20px grey;
+    
+}
+
+.aboutInfoCard h2{
+    position: relative;
+     width: 500px;
+     top: .5rem;
+     left: 5rem;
+     font-size: x-large;
+     text-indent: 1rem;
+     
+    }
+
+@media (max-width: 600px){
+
+    .aboutMain {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: max-content;
+    }
+    
+    .aboutImgContainer{
+        display: none;
+    }
+    .aboutImg{
+        display: none;
+    }
+    .aboutInfoCard{
+        display: flex;
+       position: relative;
+       
+    }
+    .aboutInfo h2{
+        display: flex;
+        position: relative;
+        left: 5rem;
+    }
+    .aboutInfo p{
+        display: flex;
+        margin: 0;
+        position: relative;
+        right: 50rem;
+        font-size: small;
+        
+       
+    }
+}
+
+/*Contact*/
+
+.contactForm{
+    position: relative;
+    left: 40rem;
+    
+}
+
+.privacyPolicy{
+    position: relative;
+    left: 53rem;
+}
